@@ -1,0 +1,447 @@
+@font-face {
+    font-family: "Lato";
+    src: url("../fons/lato/Lato-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fons/lato/Lato-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fons/lato/Lato-Black.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    border-top: 2px solid #ff3f3a;
+    background: #ffe2d4;
+    color: #1e212c;
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    width: min(1230px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.site-header {
+    position: relative;
+    z-index: 1;
+}
+
+.navbar {
+    display: flex;
+    min-height: 72px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.brand {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+}
+
+.brand img {
+    display: block;
+    width: 130px;
+    height: 22px;
+}
+
+.nav-links {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(18px, 3vw, 40px);
+}
+
+.nav-links a,
+.account-link {
+    color: #424551;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-links a:hover,
+.account-link:hover {
+    color: #ff3f3a;
+}
+
+.nav-actions {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 28px;
+}
+
+.consultation-button {
+    display: inline-flex;
+    min-height: 52px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    border-radius: 4px;
+    background: #ff3f3a;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 160ms ease;
+}
+
+.consultation-button:hover,
+.hero-button-primary:hover {
+    background: #e93632;
+}
+
+.account-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.account-link img {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.hero {
+    position: relative;
+    display: grid;
+    min-height: 590px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 48px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.hero-shape {
+    position: absolute;
+    top: 42px;
+    left: -100px;
+    width: 96px;
+    height: 96px;
+    pointer-events: none;
+}
+
+.hero-down-shape {
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    width: 52px;
+    height: auto;
+    pointer-events: none;
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 1;
+}
+
+.showreel {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    color: #1e212c;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.showreel-icon {
+    display: block;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px rgba(255, 63, 58, 0.12);
+}
+
+.showreel-icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(42px, 5vw, 64px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.hero-button {
+    display: inline-flex;
+    min-height: 52px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 32px;
+    border: 1px solid #ff3f3a;
+    border-radius: 4px;
+    color: #ff3f3a;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 160ms ease, color 160ms ease;
+}
+
+.hero-button-outline:hover {
+    background: #ff3f3a;
+    color: #fff;
+}
+
+.hero-button-primary {
+    background: #ff3f3a;
+    color: #fff;
+}
+
+.hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    max-width: 602px;
+    height: auto;
+}
+
+.hero-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 14px;
+    padding-bottom: 56px;
+}
+
+.hero-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.hero-stat strong {
+    font-size: 32px;
+    line-height: 1;
+}
+
+.hero-stat span {
+    color: #1e212c;
+    font-size: 14px;
+}
+
+.hero-stat-dot {
+    width: 8px;
+    height: 8px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: #ff3f3a;
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        gap: 18px;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .nav-links a,
+    .account-link {
+        font-size: 12px;
+    }
+
+    .nav-actions {
+        gap: 14px;
+    }
+
+    .consultation-button {
+        min-height: 44px;
+        padding: 0 20px;
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 500px;
+        gap: 24px;
+    }
+
+    .hero-stats {
+        gap: 12px;
+    }
+
+    .hero-stat {
+        gap: 6px;
+    }
+
+    .hero-stat strong {
+        font-size: 26px;
+    }
+
+    .hero-stat span {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 680px) {
+    .wrapper {
+        width: min(100% - 36px, 560px);
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 14px 0;
+    }
+
+    .brand img {
+        width: 110px;
+        height: auto;
+    }
+
+    .nav-actions {
+        gap: 10px;
+    }
+
+    .consultation-button {
+        min-height: 38px;
+        padding: 0 12px;
+        font-size: 11px;
+    }
+
+    .account-link {
+        gap: 5px;
+        font-size: 11px;
+    }
+
+    .account-link img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .nav-links {
+        order: 3;
+        flex-basis: 100%;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding-top: 48px;
+        padding-bottom: 30px;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 9vw, 54px);
+    }
+
+    .hero-image {
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: min(100%, 480px);
+    }
+
+    .hero-stats {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        row-gap: 18px;
+        padding-bottom: 32px;
+    }
+
+    .hero-stat {
+        width: calc(50% - 16px);
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .hero-stat-dot {
+        display: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .wrapper {
+        width: calc(100% - 28px);
+    }
+
+    .navbar {
+        gap: 12px 8px;
+    }
+
+    .brand img {
+        width: 90px;
+    }
+
+    .consultation-button {
+        min-height: 34px;
+        padding: 0 9px;
+        font-size: 10px;
+    }
+
+    .account-link {
+        font-size: 10px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .hero-actions {
+        gap: 12px;
+        margin-top: 28px;
+    }
+
+    .hero-button {
+        min-height: 44px;
+        padding: 0 18px;
+        font-size: 12px;
+    }
+}
